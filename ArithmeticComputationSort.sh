@@ -23,8 +23,24 @@ echo "Number of Result in Dictionaries are = ${Arithmetic[@]}"
 
 Arithmetic[1]=$result1
 Arithmetic[2]=$result2
-Arithmetic[3]=$result3
+Arithmetic[3]=$result3 
 Arithmetic[4]=$result4
 echo "Number of Result in Array are = ${Arithmetic[@]}"
 
 
+arr=($result1 $result2 $result3 $result4) 
+
+for (( i = 0; i < 5 ; i++ ))
+do
+	for (( j = $i; j < 5; j++ ))
+	do
+		if [ ${arr[$i]} -lt ${arr[$j]}  ]
+		then
+			temp=${arr[$i]}
+			arr[$i]=${arr[$j]}
+			arr[$j]=$temp
+		fi
+	done
+done
+echo "Array in Descending order :"
+echo ${arr[*]}
