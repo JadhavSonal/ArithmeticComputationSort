@@ -7,3 +7,6 @@ echo "Display the result of ((a+b*c)) = $result1"
 
 result2=$((a*b+c))
 echo "Display the result of ((a*b+c)) = $result2"
+
+result3=$((c+a/b))
+echo "Display the result of ((c+a/b)) = $result3"
