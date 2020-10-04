@@ -30,7 +30,7 @@ while [ $head -ne 5 -a $tail -ne 5 ]
                         tail=$(($tail + 1))
                 fi
                 done
-                if  [ $head -eq 11 ]
+                if  [ $head -eq 5 ]
                 then
                         echo " Head wins the game "
                 else
