@@ -35,3 +35,44 @@ percentage_of_tail=$(( $count2 * 5 ))
 
 echo "Percentage_of_head : $percentage_of_head"
 echo "Percentage_of_tail : $percentage_of_tail"
+
+
+for (( i=1;i<=20;i++ ))
+do
+num1=$(( 1 + $RANDOM % 4 ))
+  if [ $num1 -eq 1 ]
+    then
+        echo "HH"
+        let counthh++
+  elif [ $num1 -eq 2 ]
+   then     echo "TT"
+        let counttt++
+  elif [ $num1 -eq 3 ]
+    then    echo "HT"
+        let countht++
+  else [ $num1 -eq 4 ]
+        echo "TH"
+        let countth++
+
+  fi
+done
+
+echo $counthh
+echo $counttt
+echo $countht
+echo $countth
+
+dict1[HH]="$counthh"
+dict1[TT]="$counttt"
+dict1[HT]="$countht"
+dict1[TH]="$countth"
+
+percentage_of_hh=$(( $counthh * 5 ))
+percentage_of_tt=$(( $counttt * 5 ))
+percentage_of_ht=$(( $countht * 5 ))
+percentage_of_th=$(( $countth * 5 ))
+
+echo "Percentage_of_HH : $percentage_of_hh"
+echo "Percentage_of_TT : $percentage_of_tt"
+echo "Percentage_of_HT : $percentage_of_ht"
+echo "Percentage_of_TH : $percentage_of_th"
