@@ -27,3 +27,12 @@ then
 else
 	echo invalid
 fi
+
+read -p "Enter mobile number" MobNo
+MobNopat="^[0-9]{2} [0-9]{10}$"
+if [[ $MobNo =~ $MobNoPat ]]
+then
+	echo "Valid Mobile no"
+else
+	echo "Invalid Mobile no"
+fi
