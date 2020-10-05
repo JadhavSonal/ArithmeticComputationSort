@@ -19,4 +19,11 @@ else
         echo "Invalid last Name"
 fi
 
-
+read email
+Emailpat="^[abc]+[0-9]*([-_+.][0-9a-z]+)*@[0-9a-z]+[.][a-z]{2,}([.]{1})*([.][a-z]{2})*$"
+if [[ $email =~ $EmailPat ]]
+then
+	echo valid
+else
+	echo invalid
+fi
