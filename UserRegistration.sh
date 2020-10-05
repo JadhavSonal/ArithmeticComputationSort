@@ -36,3 +36,14 @@ then
 else
 	echo "Invalid Mobile no"
 fi
+
+read -p " Enter password" Pwd
+PwdPat="^[a-zA-Z0-9.,!@#$&*-](8,)$"
+patExtra="^.*[A-Z].*[0-9].*[.,!@#$&*-](1).*$"
+if [[ $Pwd =~ $PwdPat && $Pwd =~ $patExtra ]]
+then
+	echo "valid pwd"
+else
+	echo "Invalid pwd"
+fi
+
