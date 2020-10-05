@@ -28,3 +28,12 @@ then
 else
 	echo "Invalid email"
 fi
+
+read -p "Enter an mobile: " mobile
+patMobile="^[0-9]{2} [0-9]{10}$"
+if [[ $mobile =~ $patMobile ]]
+then
+	echo "Valid mobile"
+else
+	echo "Invalid mobile"
+fi
