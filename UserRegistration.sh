@@ -9,3 +9,14 @@ then
 else
 	echo "Invalid First Name"
 fi
+
+read -p "Enter a Last Name"  LastName
+LastnamePat="^([A-Z]*[a-z]){3}$"
+if [[ $LastName =~ $LastnamePat ]]
+then
+        echo "Valid last Name"
+else
+        echo "Invalid last Name"
+fi
+
+
