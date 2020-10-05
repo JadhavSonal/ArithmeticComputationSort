@@ -37,3 +37,13 @@ then
 else
 	echo "Invalid mobile"
 fi
+
+read -p "Enter a password: " password
+patPassword="^[a-zA-Z0-9.,!@#$&*-]{8,}$"
+patExtra="^.*[A-Z].*[0-9].*[.,!@#$&*-]{1,1}.*$"
+if [[ $password =~ $patPassword && $password =~ $patExtra ]]
+then
+	echo "Valid password"
+else
+	echo "Invalid password"
+fi
