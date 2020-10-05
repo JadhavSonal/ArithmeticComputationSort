@@ -20,3 +20,11 @@ else
 fi
 
 
+read -p "Enter  valid Email" email
+EmailPat=patEmail="^[a-zA-Z0-9]+([.+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,}([.][a-zA-Z]{2,}){0,1}$"
+if [[  $email =~ $patEmail ]]
+then
+	echo "Valid email"
+else
+	echo "Invalid email"
+fi
