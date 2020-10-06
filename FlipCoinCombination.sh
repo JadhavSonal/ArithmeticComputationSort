@@ -1,5 +1,3 @@
-#!/bin/bash -x
-
 echo "Welcome in Flip Coin Combination"
 head=1
 Randomcheck=$((RANDOM%2))
